@@ -12,9 +12,10 @@ import managementRoutes from './routes/management.js'
 import salesRoutes from './routes/sales.js'
 import UserData from './models/Users.js'
 import Transaction from './models/Transaction.js'
-import { dataUser, dataProduct, dataProductStat, dataTransaction } from './data/index.js'
+import { dataUser, dataProduct, dataProductStat, dataTransaction, dataOverallStat } from './data/index.js'
 import Product from './models/Product.js'
 import ProductStat from './models/ProductStat.js'
+import OverallStat from './models/OverallStat.js'
 
 
 dotenv.config()
@@ -41,7 +42,7 @@ mongoose.connect(process.env.MONGO_URL, {useNewUrlParser: true, useUnifiedTopolo
     // Product.insertMany(dataProduct)
     // ProductStat.insertMany(dataProductStat)
     // Transaction.insertMany(dataTransaction)
-
+    // OverallStat.insertMany(dataOverallStat)
     })
     .catch((err) => console.log(`${err} did not connect`))
 

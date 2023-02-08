@@ -10,9 +10,9 @@ import {
   Rating,
   useTheme,
   useMediaQuery,
-} from "@mui/material";
-import Header from "components/Header";
-import { useGetProductsQuery } from "state/api";
+} from "@mui/material"
+import Header from "components/Header"
+import { useGetProductsQuery } from "state/api"
 
 const Product = ({
     _id,
@@ -50,8 +50,8 @@ const Product = ({
             <CardContent>
                 <Typography>id: {_id}</Typography>
                 <Typography>Supply Left: {supply}</Typography>
-                {/* <Typography>Current yearly sales: {stat.yearlySalesTotal}</Typography>
-                <Typography>Current yearly units sold: {stat.yearlyTotalSoldUnits}</Typography> */}
+                <Typography>Current yearly sales: {stat[0].yearlySalesTotal}</Typography>
+                <Typography>Current yearly units sold: {stat[0].yearlyTotalSoldUnits}</Typography>
             </CardContent>
             </Collapse>
         </Card>
