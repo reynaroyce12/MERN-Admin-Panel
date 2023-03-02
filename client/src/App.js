@@ -13,8 +13,9 @@ import Transactios from './components/transactions'
 import Geography from './components/geography'
 import Overview from "components/overview";
 import DailyReport from "components/dailyReport";
-import Monthly from "components/monthlyReport";
-import Breakdown from "components/breakdown";
+import Monthly from "components/monthlyReport"
+import Breakdown from "components/breakdown"
+import Admins from "components/admins";
 
 function App() {
   const mode = useSelector((state) => state.global.mode)
@@ -37,6 +38,7 @@ function App() {
               <Route path='/daily' element={<DailyReport/>} />
               <Route path='/monthly' element={<Monthly />} />
               <Route path='/breakdown' element={<Breakdown />} />
+              <Route path='/admin' element={<Admins />} />
             </Route>
 
           </Routes>
