@@ -61,10 +61,10 @@ const Dashboard = () => {
   
   return (
     <Box p="1rem 1rem">
-      <FlexBetween>
+      {/* <FlexBetween> */}
         <Header title="DASHBOARD" subtitle="Welcome to your dashboard" />
 
-        <Box>
+        {/* <Box>
           <Button
             sx={{
               backgroundColor: theme.palette.secondary.light,
@@ -78,7 +78,7 @@ const Dashboard = () => {
             Download Reports
           </Button>
         </Box>
-      </FlexBetween>
+      </FlexBetween> */}
 
       <Box
         mt="20px"

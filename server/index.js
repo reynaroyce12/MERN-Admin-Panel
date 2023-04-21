@@ -37,12 +37,13 @@ const PORT = process.env.PORT || 9000
 mongoose.connect(process.env.MONGO_URL, {useNewUrlParser: true, useUnifiedTopology: true,})
     .then(() => { app.listen(PORT, () => console.log(`Server listening on port ${PORT}`))
 
+
     //Adding user data (Don't uncomment- It's single insertion)
     // UserData.insertMany(dataUser)
     // Product.insertMany(dataProduct)
     // ProductStat.insertMany(dataProductStat)
     // Transaction.insertMany(dataTransaction)
     // OverallStat.insertMany(dataOverallStat)
+
     })
     .catch((err) => console.log(`${err} did not connect`))
-

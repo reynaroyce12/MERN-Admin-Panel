@@ -6,12 +6,11 @@ import Header from './Header'
 import { useGetAdminsQuery } from 'state/api'
 import CustomColumnMenu from './customColumnMenu'
 
-
 const Admins = () => {
     const theme = useTheme()
     const { data, isLoading } = useGetAdminsQuery()
 
-      const columns = [
+    const columns = [
     {
       field: "name",
       headerName: "Name",

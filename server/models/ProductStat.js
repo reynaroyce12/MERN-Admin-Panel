@@ -12,6 +12,7 @@ const ProductStatSchema = new mongoose.Schema({
             totalUnits: Number,
         },
     ],
+    
     dailyData: [{
         date: String,
         totalSale: Number,

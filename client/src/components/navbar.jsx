@@ -4,7 +4,7 @@ from '@mui/icons-material'
 import FlexBetween from './flexBetween'
 import { useDispatch } from 'react-redux'
 import { setMode } from 'state'
-import { AppBar, IconButton, Toolbar, useTheme, InputBase, Button, Box , Menu, MenuItem, Typography} from '@mui/material'
+import { AppBar, IconButton, Toolbar, useTheme, InputBase, Button, Box , Menu, MenuItem, Typography, Tooltip} from '@mui/material'
 import SupervisorAccountIcon from '@mui/icons-material/SupervisorAccount';
 import Avatar from '@mui/material/Avatar';
 
@@ -53,9 +53,12 @@ const Navbar = ({user, isSideBarOpen, setIsSideBarOpen}) => {
                     <LightModeOutlined sx={{ fontSize: '25px'}} />
                 )}
             </IconButton>
-            <IconButton>
+            <Tooltip title='Upcoming feature'>
+                <IconButton>
                 <SettingsOutlined sx={{ fontSize: '25px'}} />
             </IconButton>
+            </Tooltip>
+          
             <FlexBetween>
             <Button
               onClick={handleClick}
@@ -76,7 +79,8 @@ const Navbar = ({user, isSideBarOpen, setIsSideBarOpen}) => {
                 borderRadius="50%"
                 sx={{ objectFit: "cover" }}
               /> */}
-              <Avatar sx={{ width: 30, height: 30 }}><SupervisorAccountIcon/></Avatar>
+                <Avatar sx={{ width: 30, height: 30 }}><SupervisorAccountIcon/></Avatar>
+              
               <Box textAlign="left">
                 <Typography
                   fontWeight="bold"
@@ -96,14 +100,13 @@ const Navbar = ({user, isSideBarOpen, setIsSideBarOpen}) => {
                 sx={{ color: theme.palette.secondary[300], fontSize: "25px" }}
               />
             </Button>
-            <Menu
+            {/* <Menu
               anchorEl={anchorElement}
               open={isOpen}
               onClose={handleClose}
-              anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
-            >
+              anchorOrigin={{ vertical: "bottom", horizontal: "center" }}>
               <MenuItem onClick={handleClose}>Log Out</MenuItem>
-            </Menu>
+            </Menu> */}
           </FlexBetween>
         </FlexBetween>
 

@@ -34,6 +34,7 @@ import SupervisorAccountIcon from '@mui/icons-material/SupervisorAccount';
 import Avatar from '@mui/material/Avatar';
 
 import FlexBetween from './flexBetween';
+import { padding } from '@mui/system';
 
 const navItems = [
   {
@@ -105,7 +106,7 @@ const Sidebar = ({drawerWidth, isSideBarOpen, setIsSideBarOpen, isNonMobile}) =>
     }, [pathname])
 
     return (
-        <Box component='nav'>
+        <Box component='nav' >
             {isSideBarOpen && (
                 <Drawer 
                     open={isSideBarOpen}
@@ -119,7 +120,8 @@ const Sidebar = ({drawerWidth, isSideBarOpen, setIsSideBarOpen, isNonMobile}) =>
                             backgroundColor: theme.palette.background.alt,
                             boxSizing: 'border-box',
                             borderWidth: isNonMobile ? 0 : '2px',
-                            width: drawerWidth
+                            width: drawerWidth,
+                            paddingBottom: '7rem'
                         }
                     }}>
                     <Box width='100%'>
@@ -178,18 +180,9 @@ const Sidebar = ({drawerWidth, isSideBarOpen, setIsSideBarOpen, isNonMobile}) =>
                         </List>
                     </Box>
 
-       <Box position='absolute' top='55rem'>
+       {/* <Box position='absolute' top='55rem'>
             <Divider/>
             <FlexBetween textTransform="none" gap="1.3rem" m="1.5rem 2.5rem 0 3rem">
-              {/* <Box
-                component="avatar"
-                alt="profile"
-                
-                height="40px"
-                width="40px"
-                borderRadius="50%"
-                sx={{ objectFit: "cover" }}
-              /> */}
               <Avatar><SupervisorAccountIcon/></Avatar>
               <Box textAlign="left">
                 <Typography
@@ -213,7 +206,7 @@ const Sidebar = ({drawerWidth, isSideBarOpen, setIsSideBarOpen, isNonMobile}) =>
                 }}
               />
             </FlexBetween>
-          </Box>
+          </Box> */}
                 </Drawer>
             )}
         </Box>
